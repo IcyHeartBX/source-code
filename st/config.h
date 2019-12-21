@@ -190,8 +190,16 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
-	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+    { TERMMOD,              XK_Num_Lock,    numlock,        {.i = 0} },
+    { MODKEY,               XK_u,           kscrollup,      {.i = 1} },
+    { MODKEY,               XK_d,           kscrolldown,    {.i = 1} },
+    { MODKEY|ShiftMask,     XK_u,           kscrollup,      {.i = -1} },
+    { MODKEY|ShiftMask,     XK_d,           kscrolldown,    {.i = -1} },
+    { MODKEY,               XK_l,           copyurl,        {.i =  0} },
 };
+
+int a = 3;
+int b = 4;
 
 /*
  * Special keys (change & recompile st.info accordingly)
